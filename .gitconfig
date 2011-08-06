@@ -1,0 +1,29 @@
+[user]
+	name = chirs
+	email = chrisedgemon@gmail.com
+
+[core]
+	editor = emacs
+    excludefiles = ~/.gitignore
+    
+
+[alias]
+    amend = commit --amend
+    ci = commit
+    co = checkout
+    dc = diff --cached
+    di = diff
+    diffp = diff --patience
+    gnc = goodness --cached
+    gn = goodness
+    head = !git l -1
+    h = !git head
+    la = !git l --all
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue(%cr)%Creset' --abbrev-commit --date=relative
+    l = log --graph --abbrev-commit --date=relative
+    msg = commit --allow-empty -m
+    ra = !git r --all
+    r = !git l -20
+    st = status
+
+
