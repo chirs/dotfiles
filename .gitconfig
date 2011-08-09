@@ -1,11 +1,10 @@
 [user]
-	name = chirs
-	email = chrisedgemon@gmail.com
+    name = chirs
+    email = chrisedgemon@gmail.com
 
 [core]
-	editor = emacs
+    editor = emacs
     excludefiles = ~/.gitignore
-    
 
 [alias]
     amend = commit --amend
