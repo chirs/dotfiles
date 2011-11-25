@@ -1,32 +1,31 @@
-# Update and upgrade stuff.
-sudo apt-get update
-sudo apt-get upgrade
-
 # Configure hosts
 echo earnie | sudo tee /etc/hostname
 sudo hostname -F /etc/hostname
-sudo emacs /etc/hosts
+sudo emacs /etc/hosts # Add a reference to the hostname
 
-sudo dpkg-reconfigure tzdata
-
-# Configure ssh
+# Configure ssh (this must be done before using git.)
 ssh-keygen -t rsa
 emacs ~/.ssh/authorized_keys
 
+sudo dpkg-reconfigure tzdata
+
+# Update and upgrade stuff.
+sudo apt-get update; sudo apt-get upgrade
+
+
 # Configure git
-git config --global user.name "Chris Edgemon"
-git config --global user.email chrisedgemon@gmail.com
+git config --global user.name "Chris Edgemon"; git config --global user.email chrisedgemon@gmail.com
 
 # Grab personal repo.
 mkdir -p repos/git
-git clone git@github.com:chirs/personal.git
+git clone git@github.com:chirs/dotfiles.git
 
 # Set up server
-sudo apt-get install emacs git-core python-pip python-dev build-essential nginx
+sudo apt-get install emacs git-core python-pip python-dev build-essential nginx subversion
 
 # Install some global python packages
-sudo pip install virtualenvwrapper supervisor
-cp ~/repos/personal/.bashrc .bashrc
+sudo pip install virtualenvwrapper #supervisor
+cp ~/repos/dotfiles/.bashrc ~/.bashrc
 source /usr/local/bin/virtualenvwrapper.sh
 
 
