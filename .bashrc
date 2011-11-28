@@ -129,3 +129,5 @@ case "$TERM" in xterm*|rxvt*)
 *)
         ;;
 esac
+
+export PYTHONPATH=$PYTHONPATH:/home/chris/bin:/home/chris/repos
