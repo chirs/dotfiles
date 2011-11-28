@@ -1,0 +1,27 @@
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+
+# Default mode
+set editing-mode emacs
+
+# No bells
+set bell-style visible
+
+# Expand ~ to real path
+set expand-tilde on
+
+# Default to showing options, rather than requiring two tabs
+set show-all-if-ambiguous on
+
+# Append slash when completing symlinks to directories
+set mark-symlinked-directories on
+
+# Case insensitive tab completion
+set completion-ignore-case on
+
+# Bind the up arrow to history search, instead of history step
+"\e[A": history-search-backward
+
+# And the reverse (down)
+"\e[B": history-search-forward
